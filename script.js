@@ -21,7 +21,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     // Enviar dados para o servidor usando AJAX
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'saveData.php', true);
+    xhr.open('POST', 'api/saveData.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
