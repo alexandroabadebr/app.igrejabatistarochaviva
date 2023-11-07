@@ -1,18 +1,24 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obter os dados do formulário
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
+// Recebe os dados da URL
+$nome = $_GET['nome'];
+$telefone = $_GET['telefone'];
 
-    // Salvar os dados em um arquivo de texto (você pode usar um banco de dados aqui)
-    $data = "Nome: $name, Telefone: $phone\n";
-    file_put_contents('../dados.txt', $data, FILE_APPEND);
+// Lógica para salvar os dados em um arquivo
+$file = 'dados.txt';
+$data = "$nome, $telefone\n";
 
-    // Responder com um status de sucesso
-    http_response_code(200);
+// Abre o arquivo em modo de escrita e adiciona os dados
+if (file_put_contents($file, $data, FILE_APPEND) !== false) {
+    // Define as permissões do arquivo (por exemplo, 0644 para permissões de leitura e gravação para o proprietário e leitura para outros)
+    chmod($file, 0644);
+
+    // Envia uma resposta de sucesso
+    $response = array('success' => true, 'message' => 'Dados salvos com sucesso!');
+    echo json_encode($response);
 } else {
-    // Se o método de requisição não for POST, responder com erro
-    http_response_code(405);
-    echo 'Método não permitido';
+    // Envia uma resposta de erro se a escrita falhar
+    $response = array('success' => false, 'message' => 'Erro ao salvar dados.');
+    echo json_encode($response);
 }
 ?>
+
