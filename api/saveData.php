@@ -4,7 +4,7 @@ $nome = $_GET['nome'];
 $telefone = $_GET['telefone'];
 
 // Lógica para salvar os dados em um arquivo
-$file = 'dados.txt';
+$file = '../dados.txt';
 $data = "$nome, $telefone\n";
 
 // Abre o arquivo em modo de escrita e adiciona os dados
