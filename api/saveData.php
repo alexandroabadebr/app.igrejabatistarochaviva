@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Salvar os dados em um arquivo de texto (você pode usar um banco de dados aqui)
     $data = "Nome: $name, Telefone: $phone\n";
-    file_put_contents('dados.txt', $data, FILE_APPEND);
+    file_put_contents('../dados.txt', $data, FILE_APPEND);
 
     // Responder com um status de sucesso
     http_response_code(200);
