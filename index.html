@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Portal | IBRV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="effect.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+<div class="container">
+    <h1>Portal | IBRV</h1>
+    <img class="banner" src="img/logo-igrejabatistarochaviva.png" alt="logo-igrejabatistarochaviva">
+    <h1>Igreja Batista Rocha Viva</h1>
+    <br>
+    <p>     
+      <blockquote>
+        <h5 class="at6-color">Envolva-se</h5>
+        <h3>"Faça parte também deste movimento"</h3>
+      </blockquote>
+    </p>
+    <br><br>
+  <div class="image-feed">
+    <img class="item" src="img/familiarochaviva-ibrv.jpg" alt="familia rochaviva"> 
+    <img class="item" src="img/cultodmaravilhas-ibrv.jpg" alt="culto de maravilhas">
+    <img class="item" src="img/estudobiblico-ibrv.jpg" alt="estudo bíblico ibrv">
+    <img class="item" src="img/cultostodosdomingo-ibrv.jpg" alt="estudo bíblico ibrv">
+    <img class="item" src="img/cultoasquinta-ibrv.jpg" alt="estudo bíblico ibrv">
+    <img class="item" src="img/pastorpresidente-ibrv.jpg" alt="estudo bíblico ibrv">
+  </div>
+
+    <ul>
+      <li><a href="https://www.instagram.com/rochaviva_ofc/" target="_blank">📷 Instagram | IBRV</a></li>
+      <li><a href="https://www.youtube.com/@PRLuinspirar" target="_blank">📹 YouTube | IBRV</a></li>
+    </ul>
+
+    <p class="username">Seja muito bem vindo!<br><br>
+    Esse é o <u>Portal da Igreja Batista Rocha Viva.</u><br><br>
+        E através deste canal nós queremos orar por você e sua família 🙏
+    </p>
+    <br><br>
+    
+    <h3>Queremos orar 🙏 por você e sua familia 👨‍👩‍👦‍👦 
+      <br>Nos envie o seu contato 📱 
+    </h3>
+
+    <br>
+    <form id="contactForm" method="post" action="process_form.php">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required><br><br>
+
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Seu número de telefone" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="successMessage" style="display: none; color: green;">Dados enviados com sucesso!</p>
+
+    <footer>Alegrei-me quando me disseram vamos à casa do Senhor. <br>Salmos 122-1</footer>
+</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
